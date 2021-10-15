@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\SequenceHandler">
+      <UniqueIdentifier>{54dfab89-ca9f-4794-b94f-0025e4da8421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Sequence">
+      <UniqueIdentifier>{42bffc82-c4d9-486f-9255-d7fde37afb71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\SequenceHandler">
+      <UniqueIdentifier>{fc82222e-ab1c-4eca-be9c-7ba69d479348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Sequence">
+      <UniqueIdentifier>{ef5b13af-2230-4803-a960-130a8aeba959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\DataHandler">
+      <UniqueIdentifier>{2ff4c8b4-5925-40f0-8286-427553fc58d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\DataHandler">
+      <UniqueIdentifier>{eafcfcdd-2717-4dc5-91bb-65262f19d5b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CAN_Analyzer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonMark.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInputHandler.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="RawMsgSequenceHandler.cpp">
+      <Filter>Файлы ресурсов\SequenceHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgSequence.cpp">
+      <Filter>Файлы ресурсов\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="ByteSequence.cpp">
+      <Filter>Файлы ресурсов\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandProcessor.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="DataFormatter.cpp">
+      <Filter>Файлы ресурсов\DataHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgSorter.cpp">
+      <Filter>Файлы ресурсов\DataHandler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileReader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonMark.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInputHandler.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgSequenceHandler.h">
+      <Filter>Файлы заголовков\SequenceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgSequence.h">
+      <Filter>Файлы заголовков\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="ByteSequence.h">
+      <Filter>Файлы заголовков\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="RawMsgSequenceHandler.h">
+      <Filter>Файлы заголовков\SequenceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandProcessor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DataFormatter.h">
+      <Filter>Файлы заголовков\DataHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgSorter.h">
+      <Filter>Файлы заголовков\DataHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgFilter.h">
+      <Filter>Файлы заголовков\DataHandler</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
