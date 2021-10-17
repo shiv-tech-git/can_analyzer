@@ -1,6 +1,6 @@
 #include "ButtonMark.h"
 #include "cmath"
-
+#include <algorithm>
 
 bool is_button_mark(msg_data msg) {
 	if (msg.id == 0xffff) return true;
@@ -20,5 +20,6 @@ std::vector<msg_data> get_all_marks_from_msgs(std::vector<msg_data> msgs) {
 			}
 		}
 	}
+	sort(result.begin(), result.end(), [](msg_data& a, msg_data& b) -> bool {return a.time > b.time; });
 	return result;
 }

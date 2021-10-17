@@ -61,3 +61,8 @@ void ByteSequence::find_changes() {
 		}
 	}
 }
+
+
+uint32_t ByteSequence::length() {
+	return (uint32_t)msg_bytes.size();
+}

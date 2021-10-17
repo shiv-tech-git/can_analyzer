@@ -4,9 +4,10 @@
 #include "MsgSorter.h"
 #include <string>
 
-CommandProcessor::CommandProcessor(MsgSequenceHandler* msh) : ms_handler(msh) {
+CommandProcessor::CommandProcessor(RawMsgSequenceHandler* msh) : ms_handler(msh) {
 	d_formatter = new DataFormatter();
 	m_sorter = new MsgSorter();
+	m_filter = new MsgFilter(ms_handler);
 }
 
 CommandProcessor::~CommandProcessor() {
@@ -51,6 +52,24 @@ void CommandProcessor::print_byte_data(std::unordered_map<std::string, std::stri
 	}
 }
 
-void CommandProcessor::print_pulse_near_mark(uint32_t mark_number) {
+void CommandProcessor::print_ids_with_pulse_near_mark(uint32_t mark_number) {
+	std::vector<MSG_ID_T> ids = m_filter->get_ids_with_pulse_near_mark(mark_number);
+	for (auto it = ids.begin(); it != ids.end(); it++) {
+		std::cout << std::hex << *it << std::endl;
+	}
+}
+
+void CommandProcessor::print_ids_with_leading_edge_near_mark(uint32_t mark_number) {
+	std::vector<MSG_ID_T> ids = m_filter->get_ids_with_leading_edge_near_mark(mark_number);
+	for (auto it = ids.begin(); it != ids.end(); it++) {
+		std::cout << std::hex << *it << std::endl;
+	}
+}
+
+void CommandProcessor::print_ids_with_falling_edge_near_mark(uint32_t mark_number) {
+
+}
+
+void CommandProcessor::print_ids_with_pulse_near_marks(uint32_t mark1, uint32_t mark2) {
 
 }

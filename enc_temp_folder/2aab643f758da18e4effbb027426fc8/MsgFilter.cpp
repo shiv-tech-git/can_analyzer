@@ -44,7 +44,6 @@ std::vector<MSG_ID_T> MsgFilter::get_ids_with_pulse_near_marks(int mark1, int ma
 	std::vector<MSG_ID_T> result;
 	return result;
 }
-
 std::vector<MSG_ID_T> MsgFilter::get_ids_with_leading_edge_near_mark(int mark) {
 	std::set<MSG_ID_T> result;
 	std::vector<msg_data> marks = ms_handler->marks;
@@ -75,7 +74,6 @@ std::vector<MSG_ID_T> MsgFilter::get_ids_with_leading_edge_near_mark(int mark) {
 	}
 	return v_result;
 }
-
 std::vector<MSG_ID_T> MsgFilter::get_ids_with_falling_edge_near_mark(int mark) {
 	std::vector<MSG_ID_T> result;
 	return result;

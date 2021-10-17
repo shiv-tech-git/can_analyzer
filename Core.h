@@ -4,7 +4,7 @@
 #include <unordered_map>
 
 #include "DataStructures.h"
-#include "MsgSequenceHandler.h"
+#include "RawMsgSequenceHandler.h"
 #include "CommandProcessor.h"
 
 #define EXIT_CMD "exit"
@@ -12,6 +12,7 @@
 #define PRINT_IDS_CMD "print_ids"
 #define PRINT_TOP_CHANGES "print_top_changes"
 #define GET_BYTE_DATA "get_byte_data"
+#define FILTER_MSG "filter_msg"
 
 
 class Core {
@@ -22,7 +23,7 @@ public:
 
 private:
 	CommandProcessor* c_proc;
-	MsgSequenceHandler* ms_handler;
+	RawMsgSequenceHandler* ms_handler;
 	std::unordered_map<std::string, std::string> parse_user_input(std::string input);
 
 };

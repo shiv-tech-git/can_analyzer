@@ -3,7 +3,7 @@
 #include <iostream>
 
 Core::Core(std::vector<msg_data> msgs) {
-	RawMsgSequinceHandler* rmsh = new RawMsgSequinceHandler();
+	RawMsgSequenceHandler* rmsh = new RawMsgSequenceHandler();
 	rmsh->init_with_msg_data(msgs);
 	ms_handler = rmsh;
 	c_proc = new CommandProcessor(ms_handler);
@@ -60,6 +60,26 @@ void Core::handle_user_command(std::string input) {
 	}
 	else if (cmd == GET_BYTE_DATA) {
 		c_proc->print_byte_data(prc_input);
+	}
+	else if (cmd == FILTER_MSG) {
+		std::string mode = prc_input["mode"];
+		if (mode == "p") {
+			uint32_t mark = stoi(prc_input["m"]);
+			c_proc->print_ids_with_pulse_near_mark(mark);
+		}
+		else if (mode == "le") {
+			uint32_t mark = stoi(prc_input["m"]);
+			c_proc->print_ids_with_leading_edge_near_mark(mark);
+		}
+		else if (mode == "fe") {
+			uint32_t mark = stoi(prc_input["m"]);
+			c_proc->print_ids_with_falling_edge_near_mark(mark);
+		}
+		else if (mode == "p2") {
+			uint32_t mark1 = stoi(prc_input["m1"]);
+			uint32_t mark2 = stoi(prc_input["m2"]);
+			c_proc->print_ids_with_pulse_near_marks(mark1, mark2);
+		}
 	}
 }
 

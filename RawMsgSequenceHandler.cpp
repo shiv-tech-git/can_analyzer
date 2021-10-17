@@ -2,7 +2,7 @@
 #include <iostream>
 #include "ButtonMark.h"
 
-void RawMsgSequinceHandler::init_with_msg_data(std::vector<msg_data> msgs) {
+void RawMsgSequenceHandler::init_with_msg_data(std::vector<msg_data> msgs) {
 	for (auto it = msgs.begin(); it != msgs.end(); it++) {
 		auto _it = msg_sequenses.find(it->id);
 		if (is_button_mark(*it)) continue;
@@ -19,14 +19,22 @@ void RawMsgSequinceHandler::init_with_msg_data(std::vector<msg_data> msgs) {
 	}
 }
 
-std::vector<std::pair<uint32_t, uint8_t> > RawMsgSequinceHandler::get_byte_sequence(uint32_t msg_id, uint8_t byte_number) {
+std::vector<std::pair<uint32_t, uint8_t> > RawMsgSequenceHandler::get_byte_sequence(uint32_t msg_id, uint8_t byte_number) {
 	return msg_sequenses[msg_id]->get_byte_sequence(byte_number);
 }
 
-std::vector<change_point> RawMsgSequinceHandler::get_changes_sequence(uint32_t msg_id, uint8_t byte_number) {
+std::vector<change_point> RawMsgSequenceHandler::get_changes_sequence(uint32_t msg_id, uint8_t byte_number) {
 	return msg_sequenses[msg_id]->get_changes_sequence(byte_number);
 }
 
-void RawMsgSequinceHandler::print_data() {
+void RawMsgSequenceHandler::print_data() {
 	std::cout << "print raw data" << std::endl;
+}
+
+std::vector<MSG_ID_T> RawMsgSequenceHandler::get_all_ids() {
+	std::vector<MSG_ID_T> result;
+	for (auto it = msg_sequenses.begin(); it != msg_sequenses.end(); it++) {
+		result.push_back(it->first);
+	}
+	return result;
 }
