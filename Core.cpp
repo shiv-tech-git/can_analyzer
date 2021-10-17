@@ -58,5 +58,8 @@ void Core::handle_user_command(std::string input) {
 	else if (cmd == PRINT_TOP_CHANGES) {
 		c_proc->print_top_changes();
 	}
+	else if (cmd == GET_BYTE_DATA) {
+		c_proc->print_byte_data(prc_input);
+	}
 }
 

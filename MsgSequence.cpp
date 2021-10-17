@@ -34,6 +34,10 @@ std::vector<std::pair<uint32_t, uint8_t> > MsgSequence::get_byte_sequence(uint8_
 	return result;
 }
 
+std::vector<change_point> MsgSequence::get_changes_sequence(uint8_t byte_number) {
+	return b_seq[byte_number]->changes_points;
+}
+
 void MsgSequence::find_changes() {
 	for (int i = 0; i < 8; i++) {
 		b_seq[i]->find_changes();

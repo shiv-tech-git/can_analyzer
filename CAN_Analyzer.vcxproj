@@ -147,6 +147,7 @@
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="DataFormatter.cpp" />
     <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="MsgFilter.cpp" />
     <ClCompile Include="MsgSequence.cpp" />
     <ClCompile Include="MsgSorter.cpp" />
     <ClCompile Include="RawMsgSequenceHandler.cpp" />

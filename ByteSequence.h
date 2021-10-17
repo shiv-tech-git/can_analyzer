@@ -12,4 +12,5 @@ public:
 	uint16_t changes_counter = 0;
 
 	void find_changes();
+	void add_change_point(MSG_TIME_T time, bool edge);
 };

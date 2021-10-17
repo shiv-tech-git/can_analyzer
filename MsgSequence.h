@@ -15,6 +15,7 @@ public:
 	void add_msg(msg_data&);
 	void find_changes();
 	std::vector<std::pair<uint32_t, uint8_t> > get_byte_sequence(uint8_t byte_number);
+	std::vector<change_point> get_changes_sequence(uint8_t byte_number);
 
 private:
 

@@ -23,6 +23,10 @@ std::vector<std::pair<uint32_t, uint8_t> > RawMsgSequinceHandler::get_byte_seque
 	return msg_sequenses[msg_id]->get_byte_sequence(byte_number);
 }
 
+std::vector<change_point> RawMsgSequinceHandler::get_changes_sequence(uint32_t msg_id, uint8_t byte_number) {
+	return msg_sequenses[msg_id]->get_changes_sequence(byte_number);
+}
+
 void RawMsgSequinceHandler::print_data() {
 	std::cout << "print raw data" << std::endl;
 }

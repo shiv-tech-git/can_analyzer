@@ -36,9 +36,6 @@
     <ClCompile Include="CAN_Analyzer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileReader.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
     <ClCompile Include="ButtonMark.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
@@ -67,6 +64,12 @@
       <Filter>Файлы ресурсов\DataHandler</Filter>
     </ClCompile>
     <ClCompile Include="MsgSorter.cpp">
+      <Filter>Файлы ресурсов\DataHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgFilter.cpp">
       <Filter>Файлы ресурсов\DataHandler</Filter>
     </ClCompile>
   </ItemGroup>

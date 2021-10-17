@@ -11,6 +11,7 @@
 #define PRINT_RESULT_CMD "result"
 #define PRINT_IDS_CMD "print_ids"
 #define PRINT_TOP_CHANGES "print_top_changes"
+#define GET_BYTE_DATA "get_byte_data"
 
 
 class Core {

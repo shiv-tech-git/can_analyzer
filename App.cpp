@@ -4,8 +4,19 @@
 #include "FileReader.h"
 #include "Core.h"
 
+#include <windows.h>
 
 void App::start() {
+
+	_COORD coordinates;
+	coordinates.X = 1000;
+	coordinates.Y = 4000;
+
+	SetConsoleScreenBufferSize(
+		GetStdHandle(STD_OUTPUT_HANDLE),
+		coordinates
+	);
+
 	UserInputHandler uih;
 	//std::string file_name = uih.get_file_name();
 	std::string file_name = "in.bin";
